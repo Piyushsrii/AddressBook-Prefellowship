@@ -12,6 +12,13 @@ public class AddressBookImplementation implements InterFaceAddressBook  {
     public void addMultiplePerson() {
         System.out.println("enter your first name:");
         String firstName = scanner.nextLine();
+         for(int i=0; i<list.size(); i++)
+        {
+            if(list.get(i).getFirstName().equalsIgnoreCase(firstName)){
+                System.out.println("This name is already exist");
+                return;
+            }
+        }
         System.out.println("enter your last name:");
         String lastName = scanner.nextLine();
         System.out.println("enter your address");
@@ -23,6 +30,7 @@ public class AddressBookImplementation implements InterFaceAddressBook  {
         System.out.println("enter your phone");
         long mobileNo = scanner.nextLong();
         System.out.println("enter your zip code");
+        scanner.next();
         String zip = scanner.next();
 
         PersonInfo person = new PersonInfo(firstName, lastName, address, city, state, mobileNo, zip);
