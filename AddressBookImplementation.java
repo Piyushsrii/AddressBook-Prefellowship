@@ -9,7 +9,7 @@ public class AddressBookImplementation implements InterFaceAddressBook  {
     Scanner scanner = new Scanner(System.in);
     List<PersonInfo> list = new LinkedList<PersonInfo>();
 
-    public void add() {
+    public void addMultiplePerson() {
         System.out.println("enter your first name:");
         String firstName = scanner.nextLine();
         System.out.println("enter your last name:");
