@@ -37,6 +37,9 @@ public static void main (String args[])
                     System.out.println("You have sucessfully deleted person's data");
                     break;
 
+                case 5:
+                    MainAddressBookClass.java
+                    break;
 
                     case 6:
                     check = false;

@@ -83,6 +83,13 @@ public class AddressBookImplementation implements InterFaceAddressBook  {
             }
         }
 
+        @Override
+        public void sortByfirstName()
+        {
+        Collections.sort(list,(p1, p2)  -> p1.getFirstName().compareTo(p2.getFirstName()));
+        System.out.println(list);
+    }
+
     public void display() {
 
         for (PersonInfo person : list)

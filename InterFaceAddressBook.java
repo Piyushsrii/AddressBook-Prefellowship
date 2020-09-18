@@ -8,4 +8,5 @@ public interface InterFaceAddressBook
         public void display();
         public void edit(String firstName);
         public void deletePersonData(String firstName);
+        public void sortByfirstName();
 }
