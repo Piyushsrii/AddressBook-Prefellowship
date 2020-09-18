@@ -90,6 +90,32 @@ public class AddressBookImplementation implements InterFaceAddressBook  {
         System.out.println(list);
     }
 
+        public void sortByZipCode()
+    {
+        Collections.sort(list, (p1, p2) ->p1.getPincode().compareTo(p2.getPincode()));
+        System.out.println(list);
+    }
+
+        @Override
+        public void viewByCity(String city) {
+        List<PersonInfo> people = list.stream().filter(person1 -> person1.getCity().equalsIgnoreCase(city)).collect(Collectors.toList());
+        for (PersonInfo person: people )
+        {
+            System.out.println(person);
+        }
+    }
+
+       @Override
+       public void viewByState(String state) {
+
+        List<PersonInfo> people = list.stream().filter(person1 -> person1.getState().equalsIgnoreCase(state)).collect(Collectors.toList());
+        for (PersonInfo person: people )
+        {
+            System.out.println(person);
+        }
+
+    }
+
     public void display() {
 
         for (PersonInfo person : list)

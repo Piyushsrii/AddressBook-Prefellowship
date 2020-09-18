@@ -9,4 +9,9 @@ public interface InterFaceAddressBook
         public void edit(String firstName);
         public void deletePersonData(String firstName);
         public void sortByfirstName();
+        public void sortByfirstName();
+        public void sortByZipCode();
+        void viewByCity(String city);
+        void viewByState(String state);
+
 }
