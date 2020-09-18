@@ -30,6 +30,14 @@ public static void main (String args[])
                     adress.edit(name);
                     break;
 
+                case 4:
+                    System.out.println("enter person's name");
+                    String firstName=scanner.next();
+                    adress.deletePersonData(firstName);
+                    System.out.println("You have sucessfully deleted person's data");
+                    break;
+
+
                     case 6:
                     check = false;
                     break;

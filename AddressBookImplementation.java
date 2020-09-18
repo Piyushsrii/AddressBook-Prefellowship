@@ -62,6 +62,18 @@ public class AddressBookImplementation implements InterFaceAddressBook  {
     }
 
 
+      @Override
+    public void deletePersonData(String firstName) 
+    {
+            for (int i = 0; i < list.size(); i++)
+            {
+                if (list.get(i).getFirstName().equalsIgnoreCase(firstName))
+                {
+                    PersonInfo person = list.get(i);
+                    list.remove(person);
+                }
+            }
+        }
 
     public void display() {
 
