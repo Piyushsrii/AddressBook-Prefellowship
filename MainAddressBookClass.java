@@ -12,7 +12,7 @@ public static void main (String args[])
         boolean check = true;
         while (check == true)
         {
-            System.out.println("1.ADD  2.DISPLAY  3.EDIT  4.DELETE  5.SORT BY NAME/ZIP  6.Sort BY ZIP 7.view by city or state  8.search person in city or state6.QUIT");
+            System.out.println("1.ADD  2.DISPLAY  3.EDIT  4.DELETE  5.SORT BY NAME/ZIP  6.Sort BY ZIP 7.view by city or state  8.search person in city or state 9. Quit");
             int option = scanner.nextInt();
             switch (option)
 
