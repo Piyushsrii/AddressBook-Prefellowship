@@ -13,5 +13,7 @@ public interface InterFaceAddressBook
         public void sortByZipCode();
         void viewByCity(String city);
         void viewByState(String state);
+        public void searchPersonInCity(String firstname);
+        public void searchPersonInState(String firstname);
 
 }

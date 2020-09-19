@@ -96,27 +96,25 @@ public class AddressBookImplementation implements InterFaceAddressBook  {
         System.out.println(list);
     }
 
-        @Override
-        public void viewByCity(String city) {
-        List<PersonInfo> people = list.stream().filter(person1 -> person1.getCity().equalsIgnoreCase(city)).collect(Collectors.toList());
-        for (PersonInfo person: people )
-        {
-            System.out.println(person);
+      @Override
+    public void searchPersonInCity(String firstName) {
+
+        List<PersonInfo> people = list.stream().filter(person1 -> person1.getFirstName().equalsIgnoreCase(firstName)).collect(Collectors.toList());
+
+        for (PersonInfo person : people) {
+            System.out.println(person.getFirstName() + "---->" + person.getCity());
         }
     }
-
-       @Override
-       public void viewByState(String state) {
-
-        List<PersonInfo> people = list.stream().filter(person1 -> person1.getState().equalsIgnoreCase(state)).collect(Collectors.toList());
-        for (PersonInfo person: people )
-        {
-            System.out.println(person);
-        }
-
+    @Override
+    public void searchPersonInState(String firstName) {
+            List<PersonInfo> people1 = list.stream().filter(person1 -> person1.getFirstName().equalsIgnoreCase(firstName)).collect(Collectors.toList());
+            for (PersonInfo person : people1) {
+                System.out.println(person.getFirstName() + "---->" + person.getState());
+            }
     }
 
-    public void display() {
+
+        public void display() {
 
         for (PersonInfo person : list)
         {
